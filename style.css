@@ -1,0 +1,103 @@
+body {
+    background-color: #333333;
+    color : #FFFFFF;
+    width: 700px;
+    text-align: center;
+    margin-right: auto;
+    margin-left : auto;
+  }
+  
+  div {
+    background-color: black;
+  }
+  
+  /* パラメータビュー */
+  #parameterView {
+    display: inline-block;
+    width: 520px;
+    text-align: left;
+    margin: 20px 0px 0px 0px;
+    padding: 8px 0px 10px 20px;
+    border: 3px solid;
+    border-color: white;
+    border-radius: 6px;
+  }
+
+  /* パラメータ（各キャラクター） */
+  .parameter {
+    display: inline-block;
+    width: 100px;
+    vertical-align: top;
+  }
+  
+  /* 敵画像ビュー */
+  #enemyImageView {
+    display: inline-block;
+    width: 400px;
+    height: 240px;
+    margin: 5px 0px 5px 0px;
+  }
+  
+  /* コマンドビュー */
+  #commandView {
+    display: inline-block;
+    width: 108px;
+    height: 150px;
+    text-align: left;
+    vertical-align: top;
+    margin: 0px 0px 20px 0px;
+    padding: 10px 20px 10px 10px;
+    border: 3px solid;
+    border-color: white;
+    border-radius: 6px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* メッセージビュー */
+  #messageView {
+    display: inline-block;
+    width: 370px;
+    height: 150px;
+    text-align: left;
+    vertical-align: top;
+    margin: 0px 0px 20px 4px;
+    padding: 10px 0px 10px 20px;
+    border: 3px solid;
+    border-color: white;
+    border-radius: 6px;
+  }
+
+  /* 各コマンド */
+  #attackCommand:hover,
+  #recoveryCommand:hover,
+  .enemyCommand:hover {
+    cursor: pointer;
+  }
+
+  /* 各コマンド */
+  #attackCommand::before,
+  #recoveryCommand::before,
+  .enemyCommand::before {
+  /* 透明な▶を各コマンドの左に追加 */
+    content: "▶";
+    opacity: 0;
+  }
+
+  /* 各コマンド */
+  #attackCommand:hover::before,
+  #recoveryCommand:hover::before,
+  .enemyCommand:hover::before {
+  /* マウスオーバーで▶を表示 */
+    opacity: 100;
+  }
+
+  /* コマンドの味方の名前 */
+  #friendName::before {
+    /* インデント調整のため
+     透明な▶を名前の左に追加 */
+     content: "▶";
+     opacity: 0;
+  }
